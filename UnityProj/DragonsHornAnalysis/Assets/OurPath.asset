@@ -1,0 +1,2280 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e82ad5bd4eeb154aa037a954a9e71c6, type: 3}
+  m_Name: OurPath
+  m_EditorClassIdentifier: 
+  Steps:
+  - RawData:
+      Direction: W
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TE
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 2
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: V
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: N
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 0
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: C
+      LR: LR
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 0
+    LongRest: 1
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: E
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 1
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: V
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: NW
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 6
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TS
+      LR: 
+      CrystalR: 100
+      CrystalG: 255
+      CrystalB: 100
+      CrystalDestroyed: Destroyed
+    EntryDirection: 3
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 1
+      Color: {r: 0.39215687, g: 1, b: 0.39215687, a: 1}
+      Destroyed: 1
+  - RawData:
+      Direction: S
+      Room: V
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: C
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TE
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 2
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: E
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 1
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: E
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 1
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TW
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 4
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: V
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: NW
+      LR: LR
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 6
+    LongRest: 1
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: N
+      Room: V
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 0
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: NW
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 6
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: V
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: C
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TE
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 2
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: V
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: C
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: N
+      Room: V
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 0
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: C
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TE
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 2
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: E
+      Room: C
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 1
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TE
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 2
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: N
+      Room: C
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 0
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: N
+      Room: V
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 0
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: N
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 0
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: E
+      Room: C
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 1
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TE
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 2
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: E
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 1
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: E
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 1
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: N
+      Room: S
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 0
+    RoomLayout: 11
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: N
+      Room: S
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 0
+    RoomLayout: 11
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: N
+      Room: S
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 0
+    RoomLayout: 11
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: E
+      Room: C
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 1
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: E
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 1
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: E
+      Room: TW
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 1
+    RoomLayout: 4
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TW
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 4
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: V
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: NW
+      LR: LR
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 6
+    LongRest: 1
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: E
+      Room: NW
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 1
+    RoomLayout: 6
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: E
+      Room: TE
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 1
+    RoomLayout: 2
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: N
+      Room: C
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 0
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TE
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 2
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: E
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 1
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: N
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 0
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: E
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 1
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TW
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 4
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: NE
+      LR: 
+      CrystalR: 255
+      CrystalG: 255
+      CrystalB: 100
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 5
+    LongRest: 0
+    Crystal:
+      Exists: 1
+      Color: {r: 1, g: 1, b: 0.39215687, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: E
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 1
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: E
+      Room: V
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 1
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: N
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 0
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: E
+      Room: TW
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 1
+    RoomLayout: 4
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: N
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 0
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: E
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 1
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: E
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 1
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: N
+      Room: S
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 0
+    RoomLayout: 11
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: E
+      Room: C
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 1
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: N
+      Room: V
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 0
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: N
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 0
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: NW
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 6
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: C
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TE
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 2
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TE
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 2
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: E
+      Room: NW
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 1
+    RoomLayout: 6
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: N
+      Room: V
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 0
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: N
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 0
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: C
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TE
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 2
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: C
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TE
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 2
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: E
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 1
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: N
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 0
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: E
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 1
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: N
+      Room: S
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 0
+    RoomLayout: 11
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TW
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 4
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: V
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: NW
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 6
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: V
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: C
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: N
+      Room: S
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 0
+    RoomLayout: 11
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TE
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 2
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: N
+      Room: C
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 0
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TE
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 2
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TE
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 2
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: V
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: N
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 0
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: N
+      Room: C
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 0
+    RoomLayout: 0
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: N
+      Room: S
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 0
+    RoomLayout: 11
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TS
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 3
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: TE
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 2
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: S
+      Room: TN
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 2
+    RoomLayout: 1
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0
+  - RawData:
+      Direction: W
+      Room: S
+      LR: 
+      CrystalR: 
+      CrystalG: 
+      CrystalB: 
+      CrystalDestroyed: 
+    EntryDirection: 3
+    RoomLayout: 11
+    LongRest: 0
+    Crystal:
+      Exists: 0
+      Color: {r: 1, g: 1, b: 1, a: 1}
+      Destroyed: 0

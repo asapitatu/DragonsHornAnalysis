@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -42,13 +43,11 @@ public class MyPath
 
     public class ConflictSet
     {
-        public ConflictSet(MyPath path, Step firstStep)
+        public ConflictSet(Step firstStep)
         {
-            Path = path;
             Steps.Add(firstStep);
         }
 
-        public MyPath Path;
         public List<Step> Steps = new List<Step>();
 
         public RectInt Bounds()
@@ -57,10 +56,190 @@ public class MyPath
         }
     }
 
-    [System.Serializable]
-    public class LayoutAnalysis
+    public class RunShape : ICloneable
     {
+        public RunShape(RoomLayout firstLayout)
+        {
+            Layouts = new List<RoomLayout> { firstLayout };
+            Directions = new List<Direction>();
+        }
 
+        private RunShape(RunShape other)
+        {
+            Layouts = new List<RoomLayout>(other.Layouts);
+            Directions = new List<Direction>(other.Directions);
+        }
+
+        public void Add(Direction dir, RoomLayout layout)
+        {
+            if (Layouts.Count >= 2)
+            {
+                Direction dir1 = Directions[Directions.Count - 1];
+                RoomLayout layout2 = Layouts[Layouts.Count - 2];
+                if (layout2 == layout && dir1 == dir)
+                {
+                    Directions.RemoveAt(Directions.Count - 1);
+                    Layouts.RemoveAt(Layouts.Count - 1);
+                    return;
+                }
+            }
+            else
+            {
+                Directions.Add(dir);
+                Layouts.Add(layout);
+            }
+        }
+
+        private int OverlapSize(RunShape other, int i, int j)
+        {
+            if (Layouts[i] != other.Layouts[j])
+                return 0;
+
+            int max = Mathf.Max(Directions.Count - i, other.Directions.Count - j);
+            if (Layouts[i] != other.Layouts[j])
+        }
+
+        public (int, int)? FindLargestOverlap(RunShape other)
+        {
+            for (int i = 0; i < Directions.Count; ++i)
+            {
+                for (int j = 0; j < other.Directions.Count; ++j)
+                {
+
+                }
+            }
+        }
+
+        public List<RoomLayout> Layouts { get; private set; }
+
+        public List<Direction> Directions { get; private set; }
+
+        object ICloneable.Clone()
+        {
+            return Clone();
+        }
+
+        public RunShape Clone()
+        {
+            return new RunShape(this);
+        }
+    }
+
+    public class Run
+    {
+        public Run(MyPath path, int startIndex, int count)
+        {
+            Path = path;
+            StartIndex = startIndex;
+
+            Count = count;
+
+            for (int i = 1; i < count; ++i)
+            {
+                Direction dir = next.ExitDirection.Value;
+                next = next.NextStep;
+                Shape.Add(dir, next.RoomLayout);
+            }
+        }
+
+        public MyPath Path { get; private set; }
+
+        public int StartIndex { get; private set; }
+
+        public int Count { get; private set; }
+
+        public Step this[int offset]
+        {
+            get 
+            { 
+                if (!(offset >= 0 && offset < Count))
+                    throw new IndexOutOfRangeException();
+                return Path.Steps[StartIndex + offset]; 
+            }
+        }
+
+        public Step Start => this[0];
+
+        public Step End => this[Count - 1];
+
+        public RunShape Shape { get; }
+
+        public IEnumerable<Step> Steps
+        {
+            get
+            {
+                Step next = Start;
+                yield return next;
+                for (int i = 1; i < Count; ++i)
+                {
+                    next = next.NextStep;
+                    yield return next;
+                }
+            }
+        }
+
+        public bool Extend(int num = 1)
+        {
+            if (StartIndex + Count + num >= Path.Steps.Count)
+                return false;
+
+            for (int i = 0; i < num; ++i)
+            {
+                Direction dir = End.ExitDirection.Value;
+                ++Count;
+                RoomLayout layout = End.RoomLayout;
+                Shape.Add(dir, layout);
+            }
+            return true;
+        }
+
+        public bool ExtendToMinShapeLength(int minShapeLength)
+        {
+            while (Shape.Layouts.Count < minShapeLength)
+            {
+                if (!Extend(minShapeLength - Shape.Layouts.Count))
+                    return false;
+            }
+            return true;
+        }
+    }
+
+    public class ConsistentRun
+    {
+        public ConsistentRun(Run run)
+        {
+            Runs.Add(new OffsetRun(0, run));
+            RunShape shape = run.Shape.Clone();
+        }
+
+        public struct OffsetRun
+        {
+            public OffsetRun(int offset, Run run)
+            {
+                Offset = offset;
+                Run = run;
+            }
+
+            public int Offset;
+            public Run Run;
+        }
+
+        public List<OffsetRun> Runs { get; } = new List<OffsetRun>();
+
+        public RunShape Shape { get; private set; }
+
+        public IEnumerable<Step> AllSteps => Runs.SelectMany(or => or.Run.Steps);
+
+        internal static bool ContainAnySameSteps(ConsistentRun a, ConsistentRun b)
+        {
+            return a.AllSteps.Intersect(b.AllSteps).Any();
+        }
+
+        public bool TryMerge(ConsistentRun other, int minOverlap)
+        {
+            if (Shape.OverlapSize(other.Shape) < minOverlap)
+                return false;
+        }
     }
 
     public MyPath(MyPathInput input, MyPathSettings settings)
@@ -73,6 +252,11 @@ public class MyPath
             AddNext(inputStep);
         }
 
+        if (settings.m_OrganizeConsistentRuns)
+        {
+            CalculateConsistentRuns();
+        }
+
         if (settings.m_AlignFixedPoints)
         {
             AlignFixedPoints();
@@ -81,6 +265,11 @@ public class MyPath
         if (settings.m_SeparateConflictSets)
         {
             SeparateConflictSets();
+        }
+
+        if (settings.m_OrganizeConsistentRuns)
+        {
+            OrganizeConsistentRuns();
         }
     }
 
@@ -91,6 +280,8 @@ public class MyPath
     public List<Step> Steps { get; } = new List<Step>();
 
     public List<ConflictSet> ConflictSets { get; } = new List<ConflictSet>();
+
+    public List<ConsistentRun> ConsistentRuns { get; private set; } = new List<ConsistentRun>();
 
     private void AddNext(MyPathInput.Step input)
     {
@@ -118,7 +309,7 @@ public class MyPath
         ConflictSet conflictSet;
         if (isLayoutConflict || index == 0)
         {
-            conflictSet = new ConflictSet(this, step);
+            conflictSet = new ConflictSet(step);
             ConflictSets.Add(conflictSet);
         }
         else
@@ -198,6 +389,69 @@ public class MyPath
             bounds.min = Vector2Int.Min(setBounds.min, bounds.min);
             bounds.max = Vector2Int.Max(setBounds.max, bounds.max);
         }
+
+    }
+
+    private void CalculateConsistentRuns()
+    {
+        // Create a run of the minimum length starting at each step
+        for (int i = 0; i < Steps.Count - Settings.m_MinConsistentRunLength; ++i)
+        {
+            Run run = new Run(Steps[i], Settings.m_MinConsistentRunLength);
+            run.ExtendToMinShapeLength(Settings.m_MinConsistentRunLength);
+            ConsistentRuns.Add(new ConsistentRun(sequence));
+        }
+
+        while (true)
+        {
+            if (!TryMergeRuns())
+            {
+                return;
+            }
+        }
+    }
+
+    private bool TryMergeRuns()
+    {
+        int runsBefore = ConsistentRuns.Count;
+
+        List<ConsistentRun> runsToProcess = ConsistentRuns.ToList();
+
+        List<ConsistentRun> runsAfter = new List<ConsistentRun>();
+        while (runsToProcess.Count > 0)
+        {
+            ConsistentRun candidate = runsToProcess[0];
+            runsToProcess.RemoveAt(0);
+
+            TryMergeRuns(candidate, runsToProcess);
+            runsAfter.Add(candidate);
+        }
+
+        ConsistentRuns = runsAfter;
+        return runsAfter.Count < runsBefore;
+    }
+
+    private void TryMergeRuns(ConsistentRun into, List<ConsistentRun> candidates)
+    {
+        for (int i = 0; i < candidates.Count; )
+        {
+            if (TryMergeRuns(into, candidates[i]))
+                candidates.RemoveAt(i);
+            else
+                ++i;
+        }
+    }
+
+    private bool TryMergeRuns(ConsistentRun a, ConsistentRun b)
+    {
+        if (ConsistentRun.ContainAnySameSteps(a, b))
+        {
+            return true;
+        }
+    }
+
+    private void OrganizeConsistentRuns()
+    {
 
     }
 }

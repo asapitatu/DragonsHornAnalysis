@@ -278,7 +278,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -322,11 +322,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cb6eb09cd08ed54eb006436738f7489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 10
-  fastMovementSpeed: 100
-  freeLookSensitivity: 3
-  zoomSensitivity: 10
-  fastZoomSensitivity: 50
+  target: {fileID: 1648334350}
+  m_Camera: {fileID: 0}
+  panSpeed: 0.01
+  pitchMin: 10
+  pitchMax: 90
+  pitchSpeed: 10
+  distanceMin: 0.1
+  distanceMax: 40
+  zoomSpeed: 2
+  pitch: 90
+  yaw: 0
+  distance: 16
+  distanceToOrthoSize: 1
+  orthoDistance: 100
+  pan: {x: 0, y: 0, z: 0}
+--- !u!1 &1648334349
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1648334350}
+  m_Layer: 0
+  m_Name: Center
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1648334350
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648334349}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1763712876}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1763712874
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,27 +403,25 @@ MonoBehaviour:
   m_PathSettings:
     m_SeparateConflictSets: 0
     m_SeparateConflictSetsMargin: 2
-    m_AlignFixedPoints: 1
+    m_AlignFixedPoints: 0
     m_FixedPointLayouts: 000000000b000000
+  m_CenterTransform: {fileID: 1648334350}
   m_HallWidth: 0.2
   m_HallArrowLength: 0.15
-  m_CrystalWidth: 0.05
+  m_CrystalWidth: 0.1
   m_CrystalHeight: 0.1
   m_CenterWidth: 0.2
+  m_DisappearingHallColor: {r: 0, g: 0, b: 0, a: 1}
   m_HallColor: {r: 0.7075472, g: 0.70578605, b: 0.6986472, a: 1}
   m_ExitColor: {r: 0.5582057, g: 0.68631583, b: 0.7924528, a: 1}
   m_CenterColor: {r: 0.7058824, g: 0.7058824, b: 0.69803923, a: 1}
   m_ConflictColor: {r: 1, g: 0, b: 0, a: 1}
-  m_GridColor: {r: 0, g: 0, b: 0, a: 1}
-  m_GridLineColor: {r: 0, g: 1, b: 0, a: 1}
   m_GridScale: {x: 1, y: 1, z: 1}
   m_Padding: 0.1
   m_YOffsetPerStep: 0.01
   m_YOffsetPerReturn: 0.1
   m_YOffsetPerConflict: 0.4
-  m_AnimateSteps: 1
-  m_StepDuration: 0.025
-  m_AnimatedTime: 0
+  m_StepsToRender: 1000000
   m_MeshFilter: {fileID: 0}
 --- !u!4 &1763712876
 Transform:
@@ -395,7 +434,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1648334350}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

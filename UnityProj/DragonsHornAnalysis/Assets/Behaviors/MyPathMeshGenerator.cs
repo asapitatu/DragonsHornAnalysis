@@ -8,6 +8,7 @@ public class MyPathMeshGenerator : MonoBehaviour
 {
     public MyPathInput m_PathInput;
     public MyPathSettings m_PathSettings;
+    public Transform m_CenterTransform;
 
     public float m_HallWidth = 0.2f;
     public float m_HallArrowLength = 0.05f;
@@ -27,9 +28,8 @@ public class MyPathMeshGenerator : MonoBehaviour
     public float m_YOffsetPerReturn = 0.1f;
     public float m_YOffsetPerConflict = 1.0f;
 
-    public bool m_AnimateSteps = false;
-    public float m_StepDuration = 0.2f;
-    public float m_AnimatedTime = 0.0f;
+    public int m_StepsToRender = 1000000;
+    private float m_StepsToRenderF = 0f;
     private int m_StepsRendered = -1;
 
     private MyPath Path { get; set; }
@@ -112,6 +112,8 @@ public class MyPathMeshGenerator : MonoBehaviour
         mesh.RecalculateBounds();
         mesh.RecalculateNormals();
         m_MeshFilter.sharedMesh = mesh;
+        if (m_CenterTransform != null)
+            m_CenterTransform.position = mesh.bounds.center;
     }
 
     private void GenerateMesh(int steps, bool force = false)
@@ -255,22 +257,20 @@ public class MyPathMeshGenerator : MonoBehaviour
             return;
 
         Path = new MyPath(m_PathInput, m_PathSettings);
+        m_StepsToRenderF = Path.Steps.Count;
+        m_StepsToRender = Path.Steps.Count;
     }
 
     // Update is called once per frame
     void Update()
     {
         int totalSteps = Path.Steps.Count;
-        int stepsToRender = totalSteps;
-        if (m_AnimateSteps)
-        {
-            m_AnimatedTime += Time.deltaTime;
-            stepsToRender = Mathf.Clamp((int)(m_AnimatedTime / m_StepDuration), 0, totalSteps);
-        } 
-        else
-        {
-            m_AnimatedTime = 0;
-        }
-        GenerateMesh(stepsToRender);
+        GenerateMesh(m_StepsToRender);
+    }
+
+    private void OnGUI()
+    {
+        m_StepsToRenderF = GUI.HorizontalSlider(new Rect(0f, 0.9f * Screen.height, Screen.width, 0.1f * Screen.height), m_StepsToRenderF, 0f, (float)Path.Steps.Count);
+        m_StepsToRender = Mathf.RoundToInt(m_StepsToRenderF);
     }
 }
